@@ -1,0 +1,18 @@
+<snippet>
+    <content><![CDATA[
+
+angular.module('${1:mod-Name}')
+
+    .${2:directiveType}('${1:mod-Name}.${3:directiveName}', [
+        '\$scope',
+        '${4:dependencies}'
+        (\$scope, ${4:dependencies}) ->
+            ${5:code}
+    ])
+
+]]></content>
+    <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+    <tabTrigger>angular</tabTrigger>
+    <!-- Optional: Set a scope to limit where the snippet will trigger -->
+    <scope>source.coffee</scope>
+</snippet>
