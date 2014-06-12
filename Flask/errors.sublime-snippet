@@ -1,0 +1,15 @@
+<snippet>
+    <content><![CDATA[
+from core.errors import *
+from core.models.${1:model} import ${2:Model}Error
+
+
+class ${2:Model}ViewError(${2:Model}Error):
+    pass
+.
+]]></content>
+    <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+    <tabTrigger>errors</tabTrigger>
+    <!-- Optional: Set a scope to limit where the snippet will trigger -->
+    <scope>source.python</scope>
+</snippet>

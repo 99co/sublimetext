@@ -1,0 +1,9 @@
+<snippet>
+    <content><![CDATA[
+${1:bpname}.add_url_rule("/${2:route}", view_func=${3:view}, methods=[${4:'GET'}])
+]]></content>
+    <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+    <tabTrigger>addurl</tabTrigger>
+    <!-- Optional: Set a scope to limit where the snippet will trigger -->
+    <scope>source.python</scope>
+</snippet>

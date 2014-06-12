@@ -1,0 +1,35 @@
+<snippet>
+    <content><![CDATA[
+
+__all__ = ['views']
+
+from flask import Blueprint
+from flask import current_app as app
+
+import views
+import signals
+from errors import *
+from core import utils
+from core.models.${1:model} import ${2:Model}Error
+
+
+${1:model} = Blueprint('${1:model}', __name__,  static_folder='static', template_folder='templates')
+
+
+# Error handlers
+# FIXME: Ideally, Flask Blueprints should use the same interface as Flask Apps
+#        to register error handlers without decorators, via register_error_handler()
+#        However, that call seems to have been missed out of the Blueprint object.
+#        The commented line below shows the ideal implementation of registering the
+#        error handler, while the uncommented line shows the hack to workaround this
+#        limitation
+#        Hack derived from https://github.com/mitsuhiko/flask/blob/master/flask/blueprints.py#L398
+# ${1:model}.register_error_handler(${2:Model}Error, utils.handle_error)
+${1:model}.record_once(lambda s: s.app._register_error_handler(${1:model}.name, ${2:Model}Error, utils.handle_error))
+
+]]></content>
+    <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+    <tabTrigger>blueprint</tabTrigger>
+    <!-- Optional: Set a scope to limit where the snippet will trigger -->
+    <!-- <scope>source.python</scope> -->
+</snippet>

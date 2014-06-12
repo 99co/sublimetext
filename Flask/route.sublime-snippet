@@ -1,0 +1,11 @@
+<snippet>
+    <content><![CDATA[
+${1:view_var} = views.${2:view_func}.as_view("${1:view_name}")
+${3:bp_name}.add_url_rule("/${4:view_endpoint}", view_func=${1:view_var}, methods=['${5:GET}'])
+]]>
+</content>
+    <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+    <tabTrigger>route</tabTrigger>
+    <!-- Optional: Set a scope to limit where the snippet will trigger -->
+    <!-- <scope>source.python</scope> -->
+</snippet>

@@ -1,0 +1,31 @@
+<snippet>
+    <content><![CDATA[
+import re
+
+from flask import request
+from flask import session
+from flask import url_for
+from flask import jsonify
+from flask import redirect
+from flask import render_template
+from flask import current_app as app
+from flask.views import MethodView
+from flask.ext.login import current_user
+from flask.ext.login import login_required
+from blinker import ANY
+from blinker import signal
+
+from core import utils
+from core.models import *
+from core.decorators import crossdomain, active_required, no_cache
+
+from errors import *
+
+
+
+]]></content>
+    <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+    <tabTrigger>views</tabTrigger>
+    <!-- Optional: Set a scope to limit where the snippet will trigger -->
+    <scope>source.python</scope>
+</snippet>
